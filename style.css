@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+  --Dark-Gray: hsl(0, 0%, 55%);
+  --Very-Dark-Gray: hsl(0, 0%, 41%);
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2.5rem 4rem;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation >nav >ul >li{
+    list-style: none;
+    display: inline;
+    margin-left: 0.9rem;
+    position: relative;
+}
+.navigation >nav >ul >li::after{
+    content: '';
+    width: 0;
+    height: 0.2rem;
+    background: var(--White);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.6rem;
+    margin: auto;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.navigation >nav >ul >li:hover::after{
+    width: 70%;
+    visibility: visible;
+}
+.navigation >nav >ul >li >a{
+    text-decoration: none;
+    color: var(--White);
+    padding-bottom: 1rem;
+}
+/* .navigation >nav >ul >li >a:hover{
+    border-bottom: 0.1rem solid var(--White);
+} */
+.header >h1{
+    margin-top: 10%;
+    font-size: 3.5rem;
+    width: 40%;
+    text-transform: uppercase;
+    font-family: 'Alata' sans-serif;
+    color: var(--White);
+    border: 0.2rem solid var(--White);
+    padding: 0.5rem 1rem;
+}
+.section-one{
+    width: 100%;
+    height: 100vh;
+    padding: 4rem 4rem 2rem 4rem;
+    display: flex;
+    justify-content: center;
+}
+.section-img,.section-one-content{
+    width: 50%;
+}
+.section-img >img{
+    width: 100%;
+}
+.section-one-content{
+    background: var(--White);
+    padding: 2.5rem;
+    margin: 10% 0 0 -10%;
+}
+.section-one-content >h1{
+    font-size: 3rem;
+    width: 80%;
+    font-family: 'Alata',sans-serif;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+.section-one-content >p{
+    color: var(--Dark-Gray);
+    width: 85%;
+}
+.section2{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+}
+.section2-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.section2-link >h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    color: var(--Black);
+}
+.section2-link >button{
+    padding: 0.5rem 1.5rem;
+    background: inherit;
+    border: 0.1rem solid var(--Black);
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.section2-link >button:hover{
+    background: var(--Black);
+    color: var(--White);
+}+
+.section2-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.section2-wrapper >div{
+    width: 24%;
+    height: 30rem;
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+.section2-wrapper >div:nth-child(1){
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(2){
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(3){
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(4){
+    background-image: url(./images/desktop/image-grid.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(5){
+    background-image: url(./images/desktop/image-from-above.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(6){
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(7){
+    background-image: url(./images/desktop/image-curiosity.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div:nth-child(8){
+    background-image: url(./images/desktop/image-fisheye.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.section2-wrapper >div >span{
+    color: var(--White);
+    font-family: 'Josefin Sans',sans-serif;
+    font-size: 1.5rem;
+    font-weight: 100;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    width: 50%;
+    z-index: 999;
+}
+.section2-wrapper >div:nth-child(4)>span{
+    width: 30%;
+}
+.section2-wrapper >div::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+.section2-wrapper >div:hover::after{
+    visibility: visible;
+}
+.section2-wrapper >div:hover >span{
+    color: var(--Black);
+}
